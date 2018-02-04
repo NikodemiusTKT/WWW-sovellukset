@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <title>Snapped</title>
+  </head>
+  <body>
+      <section class="bg-light mb-2">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class=" col-lg-4 col-md-6">
+                      <h4 class="display-4">Snapped</h4>
+                  </div>
+              </div>
+              <div class="row justify-content-center">
+                  <div class="col-lg-4 col-md-6">
+                      <p class="lead">Lähetä viestejä, jotka näkyvät vain määritellyn ajan käyttäjälle</p>
+                  </div>
+              </div>
+          </div>
+
+      </section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <button hidden class="btn btn-primary mb-2">
+          Viestit <span class="badge badge-light" id="msgCount">0</span>
+        </button>
+        <div class="row w-100"> </div>
+        <div hidden class="card col-lg-4 col-md-6 bg-light border-light mb-2" id="messageCard">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p id="cumessage"></p>
+              <footer id="sender" class="blockquote-footer"></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 form-text" id ="helpblock"></div>
+        </div>
+    </div>
+    <div class="container">
+        <form method="post" class="form" role="form" id="form" novalidate>
+            <div class="form-row justify-content-center">
+                <div class="form-group col-lg-4 col-md-6">
+                    <label for="inputCity" class="control-label">Käyttäjä</label>
+                    <div class="input-group">
+                        <input type="tel" class="form-control" id="authNumber" name="authNumber" placeholder="Oma puhelinnumerosi" required pattern="^(040|0457|050)\d{7}$">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="authButton">Tunnistaudu</button>
+                        </span>
+                    </div>
+                    <small id="userHelp" class="form-text text-muted">Puhelinnumeron on oltava validi matkapuhelinnumero.</small>
+                    <div class="invalid-feedback">
+                        Anna validi puhelinnumero.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row justify-content-center">
+                <div class="form-group col-lg-4 col-md-6">
+                    <label for="message">Viesti</label>
+                    <textarea class="form-control"  name="message" id="message" rows="3" required></textarea>
+                    <div class="invalid-feedback">
+                        Viesti ei saa olla tyhjä.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row justify-content-center">
+                <div class="form-group col-lg-1 col-md-2">
+                    <label for="showTime">Näyttöaika</label>
+                    <input type="number" name="showTime" class="form-control" id="showTime" placeholder="s" min=1 required>
+                    <small id="timeHelp" class="form-text text-muted">sekunteina</small>
+                </div>
+                <div class="form-group col-lg-3 col-md-4">
+                    <label for="receiver">Vastaanottaja</label>
+                    <input type="tel" class="form-control" id="receiver" placeholder="Vastaanottajan puhelinnumero" name="receiver" required pattern="^(040|0457|050)\d{7}$">
+                    <small id="receiverHelp" class="form-text text-muted">Puhelinnumeron on oltava validi</small>
+                    <div class="invalid-feedback">
+                        Anna validi puhelinnumero.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <button name="sendButton" id="sendButton" class="btn btn-primary btn-lg btn-block" type="button">Lähetä viesti</button>
+                </div>
+            </div>
+        </form>
+    </div>
+          </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

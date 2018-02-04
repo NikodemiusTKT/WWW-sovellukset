@@ -1,0 +1,83 @@
+font = 'Comic Sans MS';
+body {
+    margin: 0 auto;
+    font-family: font;
+    text-align: center;
+}
+h1 {
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+
+#viesti {
+    font-family: 'Comic Sans MS';
+    font-size: 18px;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    margin-top: 75px;
+    position: relative;
+    border-collapse: collapse;
+    width: 300px;
+    height: 300px;
+}
+td {
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.buttonarea {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.prompt .p {
+    font-family: 'Comic Sans MS';
+}
+
+.prompt {
+    display: none;
+    width: 100px;
+    border-radius: 5px;
+    width: 300px;
+    left: 50%;
+    top-padding: 50px;
+    bottom-padding: 50px;
+    margin-left: -150px;
+    border: 2px solid black;
+    position: absolute;
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 16pt;
+    font-family: 'Comic Sans MS';
+}
+td:nth-of-type(1) {
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+td:nth-of-type(2) {
+    border-top-color: transparent;
+}
+td:nth-of-type(3) {
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+tr:nth-of-type(3) td {
+    border-bottom-color: transparent;
+}
+

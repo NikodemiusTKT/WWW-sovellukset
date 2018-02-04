@@ -1,0 +1,45 @@
+<!-- /************************************************* -->
+ <!-- ** course   : CT30A3202 WWW-sovellukset         ** -->
+ <!-- ** author   : Teemu Tanninen                    ** -->
+ <!-- ** id       : 508505                            ** -->
+ <!-- ** date     : 07.10.17                          ** -->
+ <!-- ** exercise : week 4 - 1-5                      ** -->
+ <!-- *************************************************/ -->
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta http-equiv="content-type" charset=utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+
+    <title>Muistilista</title>
+        
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <div id="wrap" >
+        <div id="content" >
+    <h1>Muistilista</h1>
+    <div class="info">
+        <p id="adding">Lisää alkio listaan kirjoittamalla alkio tekstikenttään ja klikkaamalla lisää painiketta tai painamalla näppäimistön enter näppäintä</p>
+        <p id="removing">Alkion poisto tapahtuu hiiren klikkauksella</p>
+    </div>
+    <div id="input-area">
+            <input type="text" name="field" id="field" value="" />
+            <button class="button" type="submit">Lisää</button>
+    </div>
+        <div id="list-area">
+        <ul>
+            <li>Kohta 1</li>
+            <li>Kohta 2</li>
+            <li>Kohta 3</li>
+        </ul>
+        </div>
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

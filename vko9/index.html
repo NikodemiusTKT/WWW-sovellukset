@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+
+        <title>Säätietojen haku</title>
+    </head>
+    <body>
+        <div class="container bg-light">
+
+            <div class="d-block text-center">
+                <h1 class="display-3 mx-auto">Säätiedot</h1>
+                <p class="lead">Hae Suomen paikkakuntien säätiedot ja lisää ne sivulle</p>
+            </div>
+            <form class="form" role="form" id="form" data-toggle="validator">
+                <div class="form-group col-md-4 mx-auto">
+                    <label for="inputCity" class="control-label">Paikkakunta</label>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="Anna paikkakunta">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="input-button">Lisää</button>
+                        </span>
+                    </div>
+                    <small id="cityHelp" class="form-text text-muted">Annetun paikkakunnan on sijaittava Suomessa.</small>
+                </div>
+                <div id ="helpblock" class="form-text"></div>
+            </form>
+            <div class="card-columns d-flex flex-wrap justify-content-around" id="cards">
+                <script id="card-template" type="x-tmpl-mustache">
+<div class="card  bg-light" id="card" style="width: 20rem;">
+    <div class="card-header bg-primary text-light">
+    <div class="nav justify-content-end">
+    <button type="button" class="close nav-item" id="close-button" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+
+    </div>
+    <div class="row">
+    <div class="col">
+    <h4 class="card-title">{{city}}</h4>
+    <p class="card-subtitle">{{weather}}</p>
+    </div>
+    <img src="https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/{{icon}}.png" class="col-4 img-responsive" alt="Kuvaa ei löytynyt">
+    </div>
+    </div>
+    <div class="card-body">
+
+    <table class="table">
+    <thead>
+    <tr>
+    <th>Säätiedot</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <th scope="row">Lämpötila</th>
+    <td>{{temp}} &#x2103</td>
+    </tr>
+    <tr>
+    <th scope="row">Tuuli</th>
+    <td>{{wind}} m/s</td>
+    </tr>
+    <tr>
+    <th scope="row">Kosteus</th>
+    <td>{{humidity}} %</td>
+    </tr>
+    <tr>
+    <th scope="row">Ilmanpaine</th>
+    <td>{{pressure}} hPa</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    <div class="card-footer text-light bg-primary">
+    <div class="row justify-content-between">
+        <div class="col">
+            
+        <p  id="source">{{source}}</p>
+        </div>
+        <div class="col">
+            <small  id="time">{{time}}</small>
+        </div>
+    </div>
+    </div>
+    </div>
+                </script>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+        <script src="mustache.js"></script>
+        <script src="http://momentjs.com/downloads/moment-with-locales.min.js" charset="utf-8"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

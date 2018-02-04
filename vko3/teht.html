@@ -1,0 +1,59 @@
+<!-- Teemu Tanninen -->
+<!-- 01.10.17 --> 
+<!-- www-sovellukset -->
+<!-- vko 3 viikkotehtävät -->
+<!-- tehtävät 3-5 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ristinolla ohjelma</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+      <h1>Ristinollapeli</h1>
+      <p id="viesti"></p>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="style.css" type="text/css"/>
+      <link rel="stylesheet" href="jquery-ui.css" type="text/css"/>
+      <div class="prompt">
+          <div class="text"></div> 
+      </div>
+      <table>
+          <tr class="row">
+              <td class="col" id="1" data-c=0 data-r=0></td>
+              <td class="col" id="2" data-c=1 data-r=0></td>
+              <td class="col" id="3" data-c=2 data-r=0></td>
+          </tr>
+          <tr class="row">
+              <td id="4" class="col" data-c=0 data-r=1></td>
+              <td id="5" class="col" data-c=1 data-r=1></td>
+              <td id="6" class="col" data-c=2 data-r=1></td>
+          </tr>
+          <tr class="row">
+              <td id="7" class="col" data-c=0 data-r=2></td>
+              <td id="8" class="col" data-c=1 data-r=2></td>
+              <td id="9" class="col" data-c=2 data-r=2></td>
+          </tr>
+      </table>
+      <div class="buttonarea">
+              <button onClick="startGame()">Nollaa tilanne</button>
+              <button onClick="openDialog()">Vaihda nimet</button>
+      <div id="dialog" title="Pelaajan luonti">
+          <p id=dialog-text>Anna pelaajalle 1 nimi</p>
+          <form>
+              <fieldset>
+                  <label for="name">Nimi</label>
+                  <input type="text" name="name" id="name" value="nimi" />
+              </fieldset>
+              
+          </form>
+      </div>
+      <div class="infoarea">
+          <p id="player1"></p>
+          <p id="player2"></p>
+      </div>
+      <script type="text/javascript" src="script.js"></script> 
+  </body>
+</html>
